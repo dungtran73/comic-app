@@ -52,7 +52,8 @@ function AddComic() {
   return (
     <MainLayout>
     <SectionHeader classTitle="text-list-update" classIcon="fa fa-book" sectionTitle = "Thêm truyện mới "/>
-    <NewComicForm onAddComic={addComicHandler} setStatusSuccess={setStatusSuccessHandler}/>
+    <NewComicForm onAddComic={addComicHandler} setStatusSuccess={setStatusSuccessHandler} successStatus={statusSuccess}/>
+    {displayMessage && <ResponseMessage message={message} messageType={messageType} /> }
     </MainLayout>
   );
 }
