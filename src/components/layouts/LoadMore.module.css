@@ -1,0 +1,50 @@
+.home-load-more {
+    text-align: center !important;
+    clear: both;
+    padding: 20px;
+}
+.home-load-more a {
+    color: #8392a5;
+    background: #e9ecef;
+    outline: 0;
+    display: inline-block;
+    font-weight: 300;
+    text-align: center;
+    width: 100px;
+    height: 40px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    cursor: pointer;
+    padding-top: 10px;
+}
+.home-load-more a:hover{
+    color: #212529;
+    background: #dee2e6;
+    font-weight: 700;
+}
+.home-load-more .fa-spin {
+    -webkit-animation: fa-spin 1s linear infinite;
+    animation: fa-spin 1s linear infinite;
+}
+@-webkit-keyframes fa-spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg)
+    }
+
+    to {
+        -webkit-transform: rotate(1turn);
+        transform: rotate(1turn)
+    }
+}
+@keyframes fa-spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg)
+    }
+
+    to {
+        -webkit-transform: rotate(1turn);
+        transform: rotate(1turn)
+    }
+}

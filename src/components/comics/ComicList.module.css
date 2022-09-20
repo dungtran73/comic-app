@@ -1,0 +1,4 @@
+.list-comic {
+    list-style: outside none none;
+    display: inline;
+}

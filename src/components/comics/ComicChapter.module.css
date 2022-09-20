@@ -1,0 +1,20 @@
+.page-chapter {
+    position: relative;
+    text-align: center;
+}
+.page-chapter img {
+    color: #fff;
+    border-color: #000;
+    border-image: initial;
+    border-style: none;
+    border-width: medium;
+    height: auto;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    width: auto;
+    z-index: 1;
+    position: relative;
+    display: block;
+}

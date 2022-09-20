@@ -1,0 +1,89 @@
+body header .top {
+    height: 64px;
+    padding: 10px 0;
+}
+.div-mid {
+    width: 1200px;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+body header .top button.dark-mode {
+    float: left;
+    color: #f18121;
+    border: 1px solid;
+    height: 40px;
+    border-radius: 150px;
+    width: 40px;
+    text-align: center;
+    font-size: 14px;
+    background-color: transparent;
+    margin-left: 20px;
+    position: relative
+}
+body header .top button.dark-mode.active {
+    background-color: #f18121;
+    color: #fff
+}
+.fa-lightbulb-o::before{
+    content: "\f0eb";
+}
+body header .top .top-search input {
+    background-color: #f9f9f9;
+    width: 100%;
+    border: solid 1px #e0e0e0;
+    border-radius: 50px;
+    padding: 0 45px 0 20px;
+    color: #757575;
+    font-family: inherit;
+    font-weight: inherit;
+    font-size: inherit;
+    height: 40px;
+}
+
+body header .top .top-search button {
+    color: #f18121;
+    background: 0 0;
+    border: none;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(-10px, -50%);
+    font-size: 19px
+}
+body header .top .top-search {
+    width: 420px;
+    position: relative;
+    margin-left: 20px;
+    float: left
+}
+body header .bottom {
+    height: 52px;
+    width: 100%;
+    background-color: rgb(141, 185, 105);
+}
+body header .bottom ul li {
+    float: left;
+    color: #fff;
+    line-height: 52px;
+    font-size: 14px;
+    cursor: pointer;
+}
+body header .bottom ul:first-child {
+    float: left;
+    display: contents;
+}
+body header .bottom ul li .tags-name {
+    padding: 0 10px;
+    display: block;
+    font-weight: 400;
+    font-size: 15px;
+    text-decoration: none;
+}
+body header .bottom ul li .tags-name:hover {
+    background-color: rgb(177, 210, 180);
+    transition: .3s;
+    color: #ffffff;
+    
+}

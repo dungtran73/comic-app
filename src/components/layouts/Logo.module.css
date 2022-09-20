@@ -1,0 +1,14 @@
+.logo {
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+.logo img {
+    width: 36px;
+    height: 36px;
+}
+.logo .web-name {
+    font-size: 24px;
+    margin-left: 5px;
+    color: rgb(141, 185, 105);
+}

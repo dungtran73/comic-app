@@ -1,0 +1,78 @@
+.comic-item {
+  width: 180px;
+  float: left;
+  margin: 10px;
+}
+.book-avatar img {
+  width: 100%;
+  min-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  display: inline-block;
+  border: 1px solid #cacaca;
+}
+.top-notice {
+  position: absolute;
+  top: 9px;
+  left: 8px;
+  font-size: 0;
+}
+.top-notice .time-ago {
+  border-radius: 5px;
+  background-color: #56ccf2;
+  margin-right: 5px;
+}
+
+.top-notice .type-label {
+  border-radius: 5px;
+  animation: pulse 1s steps(5, start) infinite;
+}
+
+.top-notice .type-label.hot {
+  background-color: #ff2853;
+}
+.top-notice span {
+    font-size: 13px;
+    font-weight: 500;
+    color: #fff;
+    padding: 2px 6px 3px
+}
+@-webkit-keyframes pulse {
+    to {
+        visibility: hidden
+    }
+}
+@keyframes pulse {
+    to {
+        visibility: hidden
+    }
+}
+.book-info .book-name {
+    text-align: center;
+    font-weight: 600;
+    font-size: 13px;
+    margin-top: 5px;
+    height: 35px;
+    max-width: 100%;
+    overflow: hidden;
+    text-transform: capitalize;
+}
+.book-info .book-name h3{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.book-info .book-name p a:hover {
+    color: #f18121;
+}
+
+.book-info .last-chapter {
+    font-size: 12px;
+    text-align: center;
+}
+
+.book-info .last-chapter a {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: capitalize;
+}

@@ -1,0 +1,11 @@
+footer {
+    background-color: #fff;
+    border-top: 5px solid rgb(141, 185, 105);
+    height: 60px;
+    margin-top: 60px;
+}
+footer .div-mid {
+    width: 1200px;
+    margin: 0 auto;
+    height: 100%;
+}
