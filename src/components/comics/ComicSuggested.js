@@ -26,7 +26,7 @@ function RightArrow() {
 
 function ComicSuggested(props) {
   const responsive = [
-    { breakPoint: 1700, cardsToShow: 7 },
+    { breakPoint: 1700, cardsToShow: 6 },
     { breakPoint: 1000, cardsToShow: 6 },
     { breakPoint: 760, cardsToShow: 4 },
   ];

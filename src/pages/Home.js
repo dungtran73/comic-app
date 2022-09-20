@@ -2,24 +2,12 @@ import ComicSuggested from "../components/comics/ComicSuggested";
 import MainLayout from "../components/layouts/MainLayout";
 import ComicListUpdate from "../components/comics/ComicListUpdate";
 import LoadMore from "../components/layouts/LoadMore";
-import React, { useContext, useEffect, useState } from "react";
-import AppContext from "../store/app-context";
-import { child, get } from "firebase/database";
+import React, { useEffect, useState } from "react";
+
 function Home() {
   const [isLoading, setIsLoading] = useState(true);
   const [loadedComics, setLoadedComics] = useState([]);
   const [isDisabledButton, setIsDisabledButton] = useState(false);
-
-  const appCtx = useContext(AppContext);
-
-  function getUpdateComic() {
-    const dbRef = appCtx.dbRef;
-    get(child(dbRef, `comics`)).then((data)=>{
-      if (data.exists()) {
-        console.log(data);
-      }
-    })
-  }
 
   useEffect(()=>{
     setIsLoading(true);
@@ -33,10 +21,10 @@ function Home() {
         const comic = {
           id: data[key].id,
           bookAvatar: data[key].thumbnail,
-          timeAgo: '--',
+          timeAgo: '10 Phút trước',
           typeLabel: 'hot',
           bookName: data[key].title,
-          lastChapter: "Chapter x"
+          lastChapter: "1099"
         };
         comics.push(comic);
       }
@@ -45,7 +33,6 @@ function Home() {
       setLoadedComics(comics);
     });
 
-    getUpdateComic();
   }, []);
   const DUMMY_DATA = [
     {
@@ -55,7 +42,7 @@ function Home() {
       timeAgo: "4 Phút trước",
       typeLabel: "hot",
       bookName: "Tenshi To Akuto",
-      lastChapter: "Chapter 45",
+      lastChapter: "45",
     },
     {
       id: "2",
@@ -64,7 +51,7 @@ function Home() {
       timeAgo: "4 Phút trước",
       typeLabel: "hot",
       bookName: "Dragon Ball Z: Saiyan Saga",
-      lastChapter: "Chapter 45",
+      lastChapter: "45",
     },
     {
       id: "3",
@@ -73,7 +60,7 @@ function Home() {
       timeAgo: "4 Phút trước",
       typeLabel: "hot",
       bookName: "Tenshi To Akuto",
-      lastChapter: "Chapter 45",
+      lastChapter: "45",
     },
     {
       id: "4",
@@ -82,7 +69,7 @@ function Home() {
       timeAgo: "4 Phút trước",
       typeLabel: "hot",
       bookName: "Tenshi To Akuto",
-      lastChapter: "Chapter 45",
+      lastChapter: "45",
     },
     {
       id: "5",
@@ -91,7 +78,7 @@ function Home() {
       timeAgo: "4 Phút trước",
       typeLabel: "hot",
       bookName: "Tenshi To Akuto",
-      lastChapter: "Chapter 45",
+      lastChapter: "45",
     },
     {
       id: "6",
@@ -100,7 +87,7 @@ function Home() {
       timeAgo: "4 Phút trước",
       typeLabel: "hot",
       bookName: "Tenshi To Akuto",
-      lastChapter: "Chapter 45",
+      lastChapter: "45",
     },
     {
       id: "7",
@@ -109,7 +96,7 @@ function Home() {
       timeAgo: "4 Phút trước",
       typeLabel: "hot",
       bookName: "Tenshi To Akuto",
-      lastChapter: "Chapter 45",
+      lastChapter: "45",
     },
     {
       id: "8",

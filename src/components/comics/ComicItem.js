@@ -1,5 +1,6 @@
 import classes from "./ComicItem.module.css";
 import Card from "../ui/Card";
+import { useParams } from "react-router-dom";
 
 function ComicItem(props) {
   const bookAvatar = props.bookAvatar;
@@ -12,7 +13,7 @@ function ComicItem(props) {
     <div className={classes["comic-item"]}>
       <Card>
         <div className={classes["book-avatar"]}>
-          <a href={"/view-comic/comicId/"}>
+          <a href={`/view-comic/${props.id}/`}>
             <img src={bookAvatar} alt="thumbnail" />
           </a>
           <div className={classes["top-notice"]}>
@@ -25,7 +26,7 @@ function ComicItem(props) {
       </Card>
       <div className={classes["book-info"]}>
         <div className={classes["book-name"]}><h3>{bookName}</h3></div>
-        <div className={classes["last-chapter"]}><a href={`/view-chapter/comicId/${props.id}`}>{lastChapter}</a></div>
+        <div className={classes["last-chapter"]}><a href={`/view-chapter/${props.id}/${lastChapter}`}>Chapter {lastChapter}</a></div>
       </div>
     </div>
   );

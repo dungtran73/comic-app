@@ -16,7 +16,7 @@ function App() {
         <Route path="/history" element={<History />} />
         <Route path="/favorites" element={<Favorites />} />
         <Route path="/add-comic" element={<AddComic />} />
-        <Route path="/view-chapter/:comicId/:chapterId" element={<ViewChapter />} />
+        <Route path="/view-chapter/:chapterId/:chapterNumber" element={<ViewChapter />} />
         <Route path="/view-comic/:comicId" element={<ViewComic />} />
         <Route path="/add-chapter/:comicId" element={<AddChapter /> } />
       </Routes>

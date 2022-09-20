@@ -7,7 +7,7 @@ function ComicDetail(props) {
             <div className='comic-detail'>
                 <div className='comic-info'>
                     <div className='thumbnail'>
-                        <img src='https://i.truyenvua.xyz/ebook/190x247/vo-luyen-dinh-phong_1514903369.jpg?gf=hdfgdfg&mobile=2' />
+                        <img src={props.info.thumbnail} />
                     </div>
                     <div className='comic-other'>
                         <h1 className='comic-title'>{props.info.title}</h1>

@@ -1,6 +1,8 @@
 import SectionHeader from "../components/layouts/SectionHeader";
 import MainLayout from "../components/layouts/MainLayout";
 import ChapterContent from "../components/layouts/ChapterContent";
+import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 function ViewChapter() {
   const dummy = [
     {
@@ -39,9 +41,29 @@ function ViewChapter() {
         "https://storage.anhvip.xyz/image_comics/442/624225/img_007_1663473030.jpg?data=3q",
     },
   ];
+  const {chapterId, chapterNumber} = useParams();
+  const [isLoading, setIsLoading] = useState(true);
+  const [loadedPages, setLoadedPages] = useState([]);
+  useEffect(()=>{
+    setIsLoading(true);
+    fetch(
+      `https://comic-app-4d9e8-default-rtdb.asia-southeast1.firebasedatabase.app/${chapterId}/${chapterNumber}.json`
+    ).then((res)=>{
+      return res.json();
+    }).then((data)=>{
+      console.log(data);
+      let pages = [];
+      for (const key in data){
+        pages = data[key].pages;
+      }
+      setIsLoading(false);
+      setLoadedPages(pages);
+    });
+  }, []);
+
   return (
     <MainLayout>
-      <ChapterContent chapters={dummy} title='One Piece' chapterNumber="1077" />
+      <ChapterContent chapters={loadedPages} title='One Piece' chapterNumber={chapterNumber} />
     </MainLayout>
   );
 }

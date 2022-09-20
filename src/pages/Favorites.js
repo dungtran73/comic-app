@@ -4,31 +4,13 @@ import MainLayout from "../components/layouts/MainLayout";
 function Favorites() {
   const DUMMY_DATA = [
     {
-      id: "1",
+      id: "68817b67-8e3f-4797-91cd-f5f24f0cf04a",
       bookAvatar:
-        "https://static.wikia.nocookie.net/dragonball/images/3/3c/Viz_dbs_vol1_cover.jpg",
+        "https://images8.intercomics.club/vnstory/ea/08/ea085a50073fabac7339c403bea77ed1.jpeg",
       timeAgo: "4 Phút trước",
       typeLabel: "hot",
-      bookName: "Tenshi To Akuto",
-      lastChapter: "Chapter 45",
-    },
-    {
-      id: "2",
-      bookAvatar:
-        "https://s199.imacdn.com/vg/2022/08/17/841d20ef4f8e509b_fcae1587f533604b_2761816607499556185710.jpg",
-      timeAgo: "4 Phút trước",
-      typeLabel: "hot",
-      bookName: "Dragon Ball Z: Saiyan Saga",
-      lastChapter: "Chapter 45",
-    },
-    {
-      id: "3",
-      bookAvatar:
-        "https://s199.imacdn.com/vg/2022/08/15/689de14d05d85248_788dc7e223abc2ad_36261166054432669674.jpg",
-      timeAgo: "4 Phút trước",
-      typeLabel: "hot",
-      bookName: "Tenshi To Akuto",
-      lastChapter: "Chapter 45",
+      bookName: "Conan",
+      lastChapter: "1099",
     },
     
   ];
